@@ -1,0 +1,64 @@
+/*****************************************************************
+*================================================================*
+*                         CAPIVARA JUMPER                        *
+*================================================================*
+* AUTOR       : Klaudio Silva                                    *
+* ENGINE      : GameMaker Studio 2                               *
+* DATA        : 24/03/2026                                       *
+* FINALIDADE  : Exercício prático do curso de desenvolvimento    *
+*               de games (módulo GM Studio)                      *
+*================================================================*
+/*---------------------------------------------------------------
+  DESCRIÇÃO:
+  Este projeto é uma versão básica do clássico "Doodle Jumper".
+  O objetivo é criar um jogo onde o player pula infinitamente
+  sobre plataformas, acumulando pontuação conforme sobe.
+----------------------------------------------------------------*/
+
+*****************************************************************/
+
+/*================================================================*
+=                           TODO LIST                            =
+*================================================================*/
+
+/*------------------------- TAREFAS PENDENTES -------------------*
+ --- Criando a Base do Jogo
+ [x] Criar a room do jogo
+	   -> Importar sprite do background
+	   -> Configurar a câmera
+	   -> Background ser infinito
+ [x] Importar sprites (player, plataformas, fundo, HUD)
+ [x] Criar objetos correspondentes aos sprites
+ [ ] Importar os sons
+ [ ] Criar as fontes do jogo
+ 
+ [ ] Implementar jogabilidade básica:
+       -> Player com pulo infinito
+       -> Plataformas fixas
+       -> Plataformas que caem após contato
+       -> Plataformas móveis (esquerda/direita)
+	   
+ [ ] Implementar scroll infinito (câmera seguindo player)
+ [ ] Adicionar sistema de pontuação (altura máxima)
+ [ ] Criar tela de High Score
+ [ ] Criar tela de Game Over
+*---------------------------------------------------------------*/
+
+/*------------------------- MELHORIAS FUTURAS -------------------*
+ [ ] Tela de escolha do personagem
+ [ ] Tela de compra (loja) de novos personagens
+ [ ] Ajustar dificuldade progressiva (menos plataformas, mais móveis)
+ [ ] Adicionar power-ups (molas)
+ [ ] Melhorar interface gráfica (HUD, menus, efeitos visuais)
+ [ ] Testar colisões e otimizar performance
+*---------------------------------------------------------------*/
+
+/*------------------------- NOTAS DE USO ------------------------*
+ -> Cada item marcado [X] indica tarefa concluída.
+ -> Revisar sempre antes de compilar nova versão.
+ -> Manter consistência nos sprites e objetos.
+*---------------------------------------------------------------*/
+
+/*****************************************************************
+*========================= FIM DO TODO ==========================*
+*****************************************************************/

@@ -8,7 +8,7 @@
     "children":[],
     "name":"Default",
   },
-  "defaultScriptType":0,
+  "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"notes","folderPath":"folders/notes.yy","name":"notes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"objects","folderPath":"folders/objects.yy","name":"objects","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -29,6 +29,11 @@
   "name":"Capivara_Jumper",
   "resources":[
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},},
+    {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
+    {"id":{"name":"obj_plat_fall","path":"objects/obj_plat_fall/obj_plat_fall.yy",},},
+    {"id":{"name":"obj_plat_fixed","path":"objects/obj_plat_fixed/obj_plat_fixed.yy",},},
+    {"id":{"name":"obj_plat_move","path":"objects/obj_plat_move/obj_plat_move.yy",},},
+    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
     {"id":{"name":"spr_base_menu","path":"sprites/spr_base_menu/spr_base_menu.yy",},},
     {"id":{"name":"spr_base","path":"sprites/spr_base/spr_base.yy",},},
