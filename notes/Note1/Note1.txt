@@ -32,11 +32,12 @@
  [ ] Importar os sons
  [ ] Criar as fontes do jogo
  
- [ ] Implementar jogabilidade básica:
+ [x] Implementar jogabilidade básica:
        -> Player com pulo infinito
        -> Plataformas fixas
        -> Plataformas que caem após contato
        -> Plataformas móveis (esquerda/direita)
+	   -> Morte do player ao cair das plataformas
 	   
  [ ] Implementar scroll infinito (câmera seguindo player)
  [ ] Adicionar sistema de pontuação (altura máxima)

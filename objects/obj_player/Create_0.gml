@@ -2,7 +2,7 @@
 //criando a física básica
 vsp = 0;             //velocidade vertical
 hsp = 0;             //velocidade horizontal
-jump_force = -14;    //força do pulo
+jump_force = -13;    //força do pulo
 gravity = 0.5;       //força da gravidade sobre a capivara
 
 //velocidade dos movimentos laterais
