@@ -22,39 +22,29 @@ vsp += gravity;
 // ============================================================
 
 // Só verifica colisão enquanto o player está caindo (vsp > 0).
-if (vsp > 0) {
-
-    // Varre pixel a pixel a distância que o player vai percorrer neste frame.
-    for (var _i = 1; _i <= ceil(vsp); _i++) {
-
-        var _hit = noone; // guarda a instância colidida (começa como "nenhuma")
-        var _type = "";   // guarda o tipo da plataforma colidida
-
-        // Checa cada tipo de plataforma neste pixel de varredura
-        if (place_meeting(x, y + _i, obj_plat_fixed)) {
-            _hit  = instance_place(x, y + _i, obj_plat_fixed);
-            _type = "fixed";
-        } else if (place_meeting(x, y + _i, obj_plat_fall)) {
-            _hit  = instance_place(x, y + _i, obj_plat_fall);
-            _type = "fall";
-        } else if (place_meeting(x, y + _i, obj_plat_move)) {
-            _hit  = instance_place(x, y + _i, obj_plat_move);
-            _type = "move";
-        }
-
-        // Se encontrou alguma plataforma neste pixel...
-        if (_hit != noone) {
-            y   = y + _i - 1; // reposiciona exatamente um pixel acima da colisão
-            vsp = jump_force;  // aplica o pulo
-
-            // Efeito especial da plataforma que cai
-            if (_type == "fall") {
-                with (_hit) { fall = true; }
-            }
-
-            break; // encerra a varredura
-        }
+// Checa se na posição FINAL do movimento já haverá colisão
+if (place_meeting(x, y + vsp, obj_plat_fixed) && vsp > 0) {
+    // Anda pixel a pixel até encostar na plataforma
+    while (!place_meeting(x, y + 1, obj_plat_fixed)) {
+        y += 1;
     }
+    vsp = jump_force;
+}
+
+if (place_meeting(x, y + vsp, obj_plat_fall) && vsp > 0) {
+    while (!place_meeting(x, y + 1, obj_plat_fall)) {
+        y += 1;
+    }
+    var _plat = instance_place(x, y + 1, obj_plat_fall);
+    with (_plat) { fall = true; }
+    vsp = jump_force;
+}
+
+if (place_meeting(x, y + vsp, obj_plat_move) && vsp > 0) {
+    while (!place_meeting(x, y + 1, obj_plat_move)) {
+        y += 1;
+    }
+    vsp = jump_force;
 }
 
 // Só move Y DEPOIS de resolver a colisão
