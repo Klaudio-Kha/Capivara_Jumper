@@ -1,3 +1,4 @@
-global.fall = false;
-fall_spd = 0;
-fall_gravity = 0.4;
+///@description plataforma que cai
+//variavel global de cair inicia como falsa.
+fall = false;
+fall_timer = 0;  //temporizador da queda da folha

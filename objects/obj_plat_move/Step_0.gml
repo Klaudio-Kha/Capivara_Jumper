@@ -1,7 +1,15 @@
 ///@description controle do movimento horizontal
-//invertendo a direção
-if(x < x_left) hsp = abs(hsp);
-if(x > x_right) hsp = -abs(hsp);
+//movendo a plataforma
+x += hsp;
+
+//se metade da plataforma saiu pelo lado direito → voltar
+if(x > room_width + sprite_width / 2){
+	hsp = -abs(hsp);
+}
+//se metade da plataforma saiu pelo lado esquerdo → voltar
+if(x < sprite_width / 2){
+	hsp = abs(hsp);
+}
 
 //saiu por baixo da tela, destruir
 var _cam = camera_get_active();

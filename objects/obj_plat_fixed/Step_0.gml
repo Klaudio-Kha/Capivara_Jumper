@@ -1,4 +1,4 @@
-///@description
+///@description destruir ao sai da tela
 //saiu da tela, destruir
 var _cam = camera_get_active();
 var _cam_y = camera_get_view_y(_cam);
