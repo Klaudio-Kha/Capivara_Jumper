@@ -1,16 +1,10 @@
 ///@description ao criar a capivara
-//
-// ============================================================
-//  Física básica
-// ============================================================
-
-
-
+//física básica
 grav = .2;
 velv = 7;
 movv = 0;
 velh = 1;
-global.altura = 0;
+//global.altura = 0;
 //sprite_index = asset_get_index("spr_" + global.skin);
 
 cam_y = y;
@@ -19,3 +13,9 @@ cam_y = y;
 x = room_width /2;
 y = room_height * 0.75;
 
+//iniciando contagem dos pontos
+global.score = 0;
+global.score_display = 0; //score que aparece na tela, vai "correndo" até o real
+
+//ponto mais alto que o player já chegou
+highest_y_reached = y;
