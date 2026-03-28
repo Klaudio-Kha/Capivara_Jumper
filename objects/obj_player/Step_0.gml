@@ -38,9 +38,10 @@ if (movv > 0 && place_meeting(x, y + movv, obj_plataforma)){
     movv = -velv;
 
     //marca colisão
+	/*
     if (plat != noone){
         plat.colidiu = true;
-    }
+    }*/
 	
 	plat.fall = true;
 } else {
@@ -51,4 +52,27 @@ if (movv > 0 && place_meeting(x, y + movv, obj_plataforma)){
 //SAIU DA ROOM, REINICIAR
 if(y > room_height + 64){   //se o player saiu por baixo da tela + 64px
 	game_restart();         //reinicie o jogo
+}
+
+//SCROLL da TELA
+if(y < cam_y){
+	cam_y = y;
+}
+
+// posição alvo da câmera
+var target_y = cam_y - 160;
+
+// posição atual da câmera
+var atual_y = camera_get_view_y(view_camera[0]);
+
+// move suavemente até o alvo
+var novo_y = lerp(atual_y, target_y, 0.1);
+
+// aplica posição
+camera_set_view_pos(view_camera[0], 0, novo_y);
+
+//camera_set_view_pos(view_camera[0], 0, cam_y - 160);
+
+if(y > camera_get_view_y(view_camera[0]) + 380){
+	game_restart();
 }

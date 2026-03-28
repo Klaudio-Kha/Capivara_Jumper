@@ -13,3 +13,9 @@ velh = 1;
 global.altura = 0;
 //sprite_index = asset_get_index("spr_" + global.skin);
 
+cam_y = y;
+
+//posicionando o player no inicio
+x = room_width /2;
+y = room_height * 0.75;
+
