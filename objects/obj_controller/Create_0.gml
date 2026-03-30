@@ -1,3 +1,6 @@
+//inicialize aqui para garantir que existem antes de tudo
+global.frutinhas = 0;
+
 platform_spacing = 80;       //distância vertical entre as plataformas
 highest_y = room_height;   //até onde já foram criadas plataformas
 

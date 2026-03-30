@@ -12,10 +12,18 @@ while (highest_y > _cam_y - 200) {
 
     var _x    = random_range(32, room_width - 32);
     var _roll = irandom(2);
+	var _plat = noone; //guarda a plataforma, necessário para o açaí acompanhar a plataforma movel
 
-    if (_roll == 0)      instance_create_layer(_x, highest_y, "platforms", obj_plat_fixed);
-    else if (_roll == 1) instance_create_layer(_x, highest_y, "platforms", obj_plat_fall);
-    else                 instance_create_layer(_x, highest_y, "platforms", obj_plat_move);
+    if (_roll == 0)      _plat = instance_create_layer(_x, highest_y, "platforms", obj_plat_fixed);
+    else if (_roll == 1) _plat = instance_create_layer(_x, highest_y, "platforms", obj_plat_fall);
+    else                 _plat = instance_create_layer(_x, highest_y, "platforms", obj_plat_move);
+	
+	// 20% de chance de spawnar uma frutinha acima da plataforma recém criada
+    if (irandom(4) == 0) {
+        //instance_create_layer(_x, highest_y - 18, "platforms", obj_acai);
+		var _fruit = instance_create_layer(_x, highest_y - 24, "platforms", obj_acai);
+        _fruit.plat_ref = _plat; //passa a referência da plataforma para a frutinha
+    }
 }
 
 // ============================================================

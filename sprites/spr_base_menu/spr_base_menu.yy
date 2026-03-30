@@ -23,7 +23,7 @@
   ],
   "name":"spr_base_menu",
   "nineSlice":null,
-  "origin":4,
+  "origin":7,
   "parent":{
     "name":"backgrounds",
     "path":"folders/sprites/backgrounds.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":90,
-    "yorigin":80,
+    "yorigin":161,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

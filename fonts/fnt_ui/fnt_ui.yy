@@ -5,7 +5,7 @@
   "applyKerning":0,
   "ascender":40,
   "ascenderOffset":2,
-  "bold":false,
+  "bold":true,
   "canGenerateBitmap":true,
   "charset":0,
   "first":0,
