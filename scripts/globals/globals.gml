@@ -12,3 +12,6 @@ global.frutinhas = 0;
 
 //se o player perdeu, esperar 1 segundo para reinicia
 global.losing = false;
+
+//variável de controle das transições de tela
+global.transition_to = -1;   //-1 = nenhuma transição ativa

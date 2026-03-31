@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_board_back",
+  "%Name":"obj_board_records",
   "eventList":[],
   "managed":true,
-  "name":"obj_board_back",
+  "name":"obj_board_records",
   "overriddenProperties":[],
   "parent":{
     "name":"objects",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_board_return",
-    "path":"sprites/spr_board_return/spr_board_return.yy",
+    "name":"spr_board_record",
+    "path":"sprites/spr_board_record/spr_board_record.yy",
   },
   "spriteMaskId":null,
   "visible":true,
