@@ -3,3 +3,7 @@
 
 x_start = x;
 shake_timer = 8; //
+
+if(!instance_exists(obj_transition2)){
+			instance_create_layer(0, 0, "transition", obj_transition2);
+}

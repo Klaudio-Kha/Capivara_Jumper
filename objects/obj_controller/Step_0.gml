@@ -1,12 +1,11 @@
-// ============================================================
-//  GERAÇÃO INFINITA DE PLATAFORMAS
-// ============================================================
+///@description gerando plataformas
+//GERAÇÃO INFINITA DE PLATAFORMAS
 
-// Pega a posição Y atual do topo da câmera no mundo
+//pega a posição Y atual do topo da câmera no mundo
 var _cam_y = camera_get_view_y(view_camera[0]);
 
-// Gera plataformas enquanto a plataforma mais alta gerada
-// ainda estiver abaixo do topo da câmera + margem de antecedência
+//gera plataformas enquanto a plataforma mais alta gerada
+//ainda estiver abaixo do topo da câmera + margem de antecedência
 while (highest_y > _cam_y - 200) {
     highest_y -= platform_spacing;
 
@@ -26,13 +25,12 @@ while (highest_y > _cam_y - 200) {
     }
 }
 
-// ============================================================
-//  DESTRUIÇÃO DAS PLATAFORMAS QUE SAÍRAM POR BAIXO DA TELA
-// ============================================================
 
-// Como no seu sistema as plataformas NÃO se movem, precisamos destruir
-// as que ficaram abaixo da câmera aqui no controller, já que a
-// obj_plat_fixed não sabe onde a câmera está
+// DESTRUIÇÃO DAS PLATAFORMAS QUE SAÍRAM POR BAIXO DA TELA
+
+//como no seu sistema as plataformas NÃO se movem, precisamos destruir
+//as que ficaram abaixo da câmera aqui no controller, já que a
+//obj_plat_fixed não sabe onde a câmera está
 var _bottom = _cam_y + camera_get_view_height(view_camera[0]) + 34;
 
 with (obj_plat_fixed) {

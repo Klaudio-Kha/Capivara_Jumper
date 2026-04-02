@@ -24,6 +24,6 @@ if (place_meeting(x, y, obj_player) && !collected) {
 
 //se sair da tela por baixo, destruir
 var _cam_y = camera_get_view_y(view_camera[0]);
-if (y > _cam_y + 700 + 64) {
+if (y > _cam_y + 700 + 32) {
     instance_destroy();
 }
